@@ -1,10 +1,14 @@
-const itemsRef = document.querySelectorAll('.item');
-console.log("Number of categories: ", itemsRef.length);
+const categories = document.querySelector("#categories");
+console.log(categories);
+
+const menuItems = categories.querySelectorAll(".item");
+console.log("Number of categories: ", menuItems.length);
 
 
-  itemsRef.forEach(item => {
-    const itemsTitle = item.querySelector('.item h2');
-    console.log('Category: ', itemsTitle.textContent);
-    const itemsLength = item.querySelectorAll('.item > ul > li');
-    console.log('Elements: ', itemsLength.length);
-});
+for (const menuItem of menuItems) {
+    const title = menuItem.querySelector("h2");
+    console.log("Category: ", title.textContent);
+
+    const elementsList = menuItem.querySelectorAll("li");
+    console.log("Elements: ", elementsList.length);
+  }
