@@ -15,9 +15,21 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const markup = images
+const photo = images
   .flatMap((image) => `<li><img src=${image.url} alt=${image.alt}></li>`)
   .join("");
+gallery.insertAdjacentHTML("beforeend", photo);
 
-  gallery.insertAdjacentHTML("beforeend", markup);
+
+
+// const listLi = document.createElement('li');
+// listLi.classList.add('item');
+//  const elemImg = document.createElement('img');
+//  elemImg.src = ${images.url};
+//  elemImg.alt = ${images.alt};
+
+//  console.log(gallery);
+//  console.log(elemImg);
+//  elemImg.appendChild(listLi);
+//  gallery.insertAdjacentHTML("beforeend", gallery);
 
