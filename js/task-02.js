@@ -7,6 +7,8 @@ const ingredients = [
   "Condiments",
 ];
 
+
+
 const ingredientsUL = document.createElement("ul");
 
 const IngList = [];

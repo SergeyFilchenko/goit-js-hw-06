@@ -1,6 +1,6 @@
-const form = document.querySelector(".login-form");
+const loginForm = document.querySelector(".login-form");
 
-form.addEventListener("submit", handleSubmit);
+loginForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -9,21 +9,19 @@ function handleSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  // const formElements = event.currentTarget.elements;
+  // const => elements: {email, password},= event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+   if (email.value === "" || password.value === "") {
     return alert("Не все поля были запонены!");
   }
 
-  const obj = {
-    email: form.email.value,
-    password: form.password.value,
+  const inputForm = {
+    email: loginForm.email.value,
+    password: loginForm.password.value,
   };
 
-  console.log(obj);
+  console.log(inputForm);
 
-  form.reset();
+  loginForm.reset();
 }
-
-
 
