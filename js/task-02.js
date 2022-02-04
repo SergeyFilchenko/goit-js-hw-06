@@ -9,18 +9,15 @@ const ingredients = [
 
 
 
-const ingredientsUL = document.createElement("ul");
-
-const IngList = [];
+const ingredientsUL = document.querySelector("ul");
+console.log(ingredientsUL);
 
 for (const ingredient of ingredients) {
   const ingredientItem = document.createElement("li");
   ingredientItem.textContent = ingredient;
-  console.log(ingredientItem.textContent);
   ingredientItem.classList.add("item");
-  IngList.push(ingredientItem);
+  ingredientItem.textContent =ingredient;
+  console.log(ingredientItem);
+  ingredientsUL.appendChild(ingredientItem, ingredientsUL.firstElementChild)
 }
-
-ingredientsUL.append(...IngList);
-console.log(ingredientsUL);
 

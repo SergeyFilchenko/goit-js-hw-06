@@ -9,7 +9,7 @@ function handleSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  // const => elements: {email, password},= event.currentTarget;
+  
 
    if (email.value === "" || password.value === "") {
     return alert("Не все поля были запонены!");
