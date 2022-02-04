@@ -1,7 +1,11 @@
 const text = document.querySelector('#text');
-const fontSizeControl = document.querySelector('#font-size-control');
+const fSControl = document.querySelector('#font-size-control');
+
+text.style.fontSize = fSControl.value + "px";
+
+fSControl.oninput = function () {
+    text.style.fontSize = fSControl.value + "px";
+  };
 
 
-fontSizeControl.addEventListener("input", (event)=>{
-    text.style.fontSize = `${event.target.value}px`;
-})
+
